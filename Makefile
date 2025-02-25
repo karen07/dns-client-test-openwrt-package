@@ -18,12 +18,12 @@ define Package/dns-client-test
 	SECTION:=net
 	CATEGORY:=Network
 	DEPENDS:=
-	TITLE:=DNS Performance
+	TITLE:=DNS client
 	URL:=https://github.com/karen07/dns-client-test
 endef
 
 define Package/dns-client-test/description
-	DNS Performance
+	DNS client
 endef
 
 ifneq ("$(wildcard ../dns-client-test)", "")
