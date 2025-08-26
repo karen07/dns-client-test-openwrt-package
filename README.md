@@ -1,1 +1,1 @@
-# dns-perftest-openwrt-package
+# dns-client-test-openwrt-package
