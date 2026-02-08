@@ -1,2 +1,2 @@
 # dns-client-test openwrt package
-Files for building the dns-client-test OpenWrt package.
+Files to build the OpenWrt package dns-client-test.
