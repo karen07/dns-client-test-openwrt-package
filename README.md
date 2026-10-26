@@ -1,20 +1,18 @@
 # dns-client-test OpenWrt package
 
-This repository contains the OpenWrt package definition for [dns-client-test](https://github.com/karen07/dns-client-test), a configurable DNS load-test client.
-
-The package installs the `dns-client-test` binary into `/usr/bin` and does not declare additional OpenWrt runtime dependencies.
-
-For development, the Makefile can build from a sibling `../dns-client-test` checkout. Otherwise OpenWrt fetches the tagged upstream source specified by `PKG_VERSION`.
+OpenWrt packaging for [dns-client-test](https://github.com/karen07/dns-client-test), a
+configurable UDP DNS load generator. It installs the testing utility on OpenWrt.
 
 ## Описание
 
-Этот репозиторий содержит описание пакета OpenWrt для [dns-client-test](https://github.com/karen07/dns-client-test), настраиваемого клиента для нагрузочного тестирования DNS.
+Пакет OpenWrt для [dns-client-test](https://github.com/karen07/dns-client-test) -
+настраиваемого генератора нагрузки UDP DNS. Устанавливает тестовую утилиту на OpenWrt.
 
 Пакет устанавливает бинарный файл `dns-client-test` в `/usr/bin` и не объявляет дополнительных зависимостей времени выполнения OpenWrt.
 
 При разработке Makefile может собирать исходники из соседнего каталога `../dns-client-test`. Если такого каталога нет, OpenWrt загружает версию исходников по тегу, заданному в `PKG_VERSION`.
 
-## Что находится в репозитории
+## Структура проекта
 
 - `dns-client-test/Makefile` - описание OpenWrt package;
 - `openwrt-build.env` - параметры пакета для общего CI;
