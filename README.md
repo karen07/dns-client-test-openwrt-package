@@ -20,6 +20,8 @@ configurable UDP DNS load generator. It installs the testing utility on OpenWrt.
 - `openwrt-build.env` - параметры сборки для общего CI;
 - `.github/workflows/openwrt-build.yml` - вызов переиспользуемого OpenWrt workflow.
 
+**Выбор исходников и артефакт пакета:** `dns-client-test/Makefile` берёт соседний каталог `dns-client-test` при наличии его `CMakeLists.txt`; иначе получает Git-тег `v$(PKG_VERSION)` основного проекта. Пакет устанавливает бинарник в `/usr/bin/dns-client-test`. При проверке релиза отличайте сборку локальных исходников от сборки по тегу и сверяйте `PKG_VERSION` с нужной ревизией. Проверьте доступность DNS-сервера и формат создаваемого файла кеша; его читает отдельный `dns-server-test`.
+
 **Проверка изменений:** Изменения функциональности: генерация DNS-запросов изменяется в отдельном `dns-client-test`. Для упаковки проверяйте `Makefile`, `openwrt-build.env` и CI вместе; тестируйте итоговый пакет на нужной версии OpenWrt, поскольку сборка приложения сама по себе не проверяет установку и зависимости.
 
 ## Сборка
